@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Size Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/size_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Regular ($5.00)" />
+
+            <RadioButton
+                android:id="@+id/radio_family"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Family ($8.00)" />
+        </RadioGroup>
+
+
+        <!-- Toppings Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toppings (First 3 are free)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/topping_pepperoni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pepperoni" />
+
+        <CheckBox
+            android:id="@+id/topping_mushrooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mushrooms" />
+
+        <CheckBox
+            android:id="@+id/topping_olives"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Olives" />
+
+        <CheckBox
+            android:id="@+id/topping_onions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Onions" />
+
+        <CheckBox
+            android:id="@+id/topping_peppers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bell Peppers"
+            android:layout_marginBottom="16dp"/>
+
+        <CheckBox
+            android:id="@+id/topping_extra_cheese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Extra Cheese"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Delivery Option -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+
+        <RadioGroup
+            android:id="@+id/delivery_option_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+
+            <RadioButton
+                android:id="@+id/radio_delivery_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Pickup" />
+
+            <RadioButton
+                android:id="@+id/radio_delivery_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delivery" />
+        </RadioGroup>
+
+        <!-- Delivery Details -->
+        <LinearLayout
+            android:id="@+id/delivery_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Distance (km)"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:id="@+id/delivery_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="Enter distance in kilometers"
+                android:layout_marginTop="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* $10 for first 5km, +$2.50/km up to 10km, +$4/km after 10km"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

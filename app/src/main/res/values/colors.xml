@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Pizza theme colors -->
+    <color name="colorPrimary">#E53935</color>  <!-- Red -->
+    <color name="colorPrimaryLight">#FFCDD2</color>  <!-- Light Red -->
+    <color name="colorPrimaryDark">#C62828</color>  <!-- Dark Red -->
+    <color name="colorAccent">#FFA000</color>  <!-- Amber -->
+    
+    <!-- Text colors -->
+    <color name="textPrimary">#212121</color>  <!-- Dark Gray -->
+    <color name="textSecondary">#757575</color>  <!-- Medium Gray -->
+    
+    <!-- Background colors -->
+    <color name="background">#FFF3E0</color>  <!-- Light Orange -->
+    <color name="card_background">#FFFFFF</color>  <!-- White -->
+    
+    <!-- Button colors -->
+    <color name="button_primary">#F44336</color>  <!-- Red -->
+    <color name="button_text">#FFFFFF</color>  <!-- White -->
+    
+    <!-- Status bar color -->
+    <color name="status_bar">#B71C1C</color>  <!-- Dark Red -->
+    
+    <!-- Standard colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

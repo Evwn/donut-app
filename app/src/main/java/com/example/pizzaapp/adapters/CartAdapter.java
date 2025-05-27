@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 
 import com.example.pizzaapp.R;
 import com.example.pizzaapp.models.CartItem;
-import com.example.pizzaapp.models.Pizza;
+import com.example.pizzaapp.models.Donut;
 import com.example.pizzaapp.utils.CartManager;
 
 import java.util.List;
@@ -53,23 +53,33 @@ public class CartAdapter extends ArrayAdapter<CartItem> {
             ImageButton btnDecrease = convertView.findViewById(R.id.button_decrease);
             ImageButton btnRemove = convertView.findViewById(R.id.button_remove);
 
-            Pizza pizza = cartItem.getPizza();
-            itemName.setText(pizza.getName());
+            Donut donut = cartItem.getDonut();
             
             // Display size information
-            String sizeInfo = String.format("(%s)", 
-                pizza.getSize() == Pizza.Size.FAMILY ? "Family" : "Regular");
+            String sizeInfo = String.format("(%s)", donut.getSize().toString());
             
-            // Display toppings (first 3 are free)
-            List<String> toppings = pizza.getToppings();
-            String toppingsInfo = "";
+            // Get all customizations
+            List<String> toppings = donut.getToppings();
+            List<String> glazes = donut.getGlazes();
+            List<String> sprinkles = donut.getSprinkles();
+            
+            // Build customization info
+            StringBuilder customizations = new StringBuilder();
+            
             if (!toppings.isEmpty()) {
-                toppingsInfo = "\n" + String.join(", ", toppings);
-                // Show which toppings are extra
-                if (toppings.size() > 3) {
-                    toppingsInfo += String.format("\n+%d extra topping(s) @ $1.00 each", 
-                            toppings.size() - 3);
-                }
+                customizations.append("\nToppings: ").append(String.join(", ", toppings));
+            }
+            if (!glazes.isEmpty()) {
+                customizations.append("\nGlazes: ").append(String.join(", ", glazes));
+            }
+            if (!sprinkles.isEmpty()) {
+                customizations.append("\nSprinkles: ").append(String.join(", ", sprinkles));
+            }
+            
+            // Show extra charges info if any
+            int totalExtras = toppings.size() + glazes.size() + sprinkles.size() - 2; // First 2 are free
+            if (totalExtras > 0) {
+                customizations.append(String.format("\n+%d extra item(s) @ $0.50 each", totalExtras));
             }
             
             // Display delivery info if applicable
@@ -82,13 +92,13 @@ public class CartAdapter extends ArrayAdapter<CartItem> {
             
             // Combine all info
             String itemDetails = String.format("%s %s%s%s", 
-                    pizza.getName(), 
+                    donut.getName(), 
                     sizeInfo,
-                    toppingsInfo,
+                    customizations.toString(),
                     deliveryInfo);
                     
             itemName.setText(itemDetails);
-            itemPrice.setText(String.format("$%.2f", cartItem.getPizzaSubtotal()));
+            itemPrice.setText(String.format("$%.2f", cartItem.getDonutSubtotal()));
             itemQuantity.setText(String.valueOf(cartItem.getQuantity()));
 
             // Set up click listeners for quantity controls
@@ -102,7 +112,7 @@ public class CartAdapter extends ArrayAdapter<CartItem> {
                 }
                 // Show a toast message
                 String message = String.format("%s quantity updated to %d",
-                        cartItem.getPizza().getName(), cartItem.getQuantity());
+                        cartItem.getDonut().getName(), cartItem.getQuantity());
                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
             });
 
@@ -117,7 +127,7 @@ public class CartAdapter extends ArrayAdapter<CartItem> {
                     }
                     // Show a toast message
                     String message = String.format("%s quantity updated to %d",
-                            cartItem.getPizza().getName(), cartItem.getQuantity());
+                            cartItem.getDonut().getName(), cartItem.getQuantity());
                     Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
                 }
             });
@@ -131,7 +141,7 @@ public class CartAdapter extends ArrayAdapter<CartItem> {
                     listener.onCartUpdated();
                 }
                 // Show a toast message
-                String message = String.format("%s removed from cart", cartItem.getPizza().getName());
+                String message = String.format("%s removed from cart", cartItem.getDonut().getName());
                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
             });
         }

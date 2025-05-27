@@ -26,17 +26,18 @@ public class HomeFragment extends Fragment {
 
         // Set up the welcome message
         TextView welcomeText = root.findViewById(R.id.text_home);
-        welcomeText.setText("Welcome to Pizza App!");
+        welcomeText.setText("Welcome to Donut Delight!");
         welcomeText.setTextSize(24);
         welcomeText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
-        // Set up the pizza image
-        ImageView pizzaImage = root.findViewById(R.id.pizza_image);
-        pizzaImage.setImageResource(R.drawable.ic_pizza);
-        pizzaImage.setContentDescription("Delicious Pizza");
+        // Set up the donut image
+        ImageView donutImage = root.findViewById(R.id.donut_image);
+        donutImage.setImageResource(R.drawable.ic_donut);
+        donutImage.setContentDescription("Delicious Donuts");
 
         // Set up the order now button
         Button orderNowButton = root.findViewById(R.id.order_now_button);
+        orderNowButton.setText("Order Donuts Now!");
         orderNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

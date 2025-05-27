@@ -6,15 +6,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@android:drawable/ic_menu_compass"
-            android:title="Home" />
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home"
+            android:checked="false"
+            android:enabled="true"
+            android:visible="true" />
+
         <item
             android:id="@+id/nav_menu"
-            android:icon="@android:drawable/ic_menu_edit"
-            android:title="Our Menu" />
+            android:icon="@drawable/ic_menu_donut"
+            android:title="@string/menu_menu"
+            android:checked="false"
+            android:enabled="true"
+            android:visible="true" />
+
         <item
             android:id="@+id/nav_cart"
-            android:icon="@android:drawable/ic_menu_agenda"
-            android:title="My Cart" />
+            android:icon="@drawable/ic_cart"
+            android:title="@string/menu_cart"
+            android:checked="false"
+            android:enabled="true"
+            android:visible="true" />
     </group>
+
+    <!-- Removed account submenu -->
 </menu>

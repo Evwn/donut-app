@@ -3,24 +3,24 @@ package com.example.pizzaapp.models;
 import java.util.Date;
 
 public class Purchase {
-    private Pizza pizza;
+    private Donut donut;
     private int quantity;
     private Date purchaseDate;
     private double totalPrice;
     private boolean isDelivery;
     private double deliveryFee;
 
-    public Purchase(Pizza pizza, int quantity) {
-        this.pizza = pizza;
+    public Purchase(Donut donut, int quantity) {
+        this.donut = donut;
         this.quantity = quantity;
         this.purchaseDate = new Date();
-        this.totalPrice = pizza.getTotalPrice() * quantity;
+        this.totalPrice = donut.getTotalPrice() * quantity;
         this.isDelivery = false;
         this.deliveryFee = 0.0;
     }
 
     public Purchase(CartItem cartItem) {
-        this.pizza = cartItem.getPizza();
+        this.donut = cartItem.getDonut();
         this.quantity = cartItem.getQuantity();
         this.purchaseDate = new Date();
         this.totalPrice = cartItem.getTotalPrice();
@@ -28,8 +28,13 @@ public class Purchase {
         this.deliveryFee = cartItem.getDeliveryFee();
     }
 
-    public Pizza getPizza() {
-        return pizza;
+    public Donut getDonut() {
+        return donut;
+    }
+    
+    // For backward compatibility
+    public Donut getPizza() {
+        return donut;
     }
 
     public int getQuantity() {
@@ -50,5 +55,13 @@ public class Purchase {
     
     public double getDeliveryFee() {
         return deliveryFee;
+    }
+    
+    /**
+     * Calculates the subtotal of the donut purchase (price * quantity)
+     * @return The subtotal amount
+     */
+    public double getDonutSubtotal() {
+        return donut.getTotalPrice() * quantity;
     }
 }

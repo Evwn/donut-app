@@ -1,7 +1,7 @@
 package com.example.pizzaapp.utils;
 
 import com.example.pizzaapp.models.CartItem;
-import com.example.pizzaapp.models.Pizza;
+import com.example.pizzaapp.models.Donut;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +19,10 @@ public class CartManager {
         return instance;
     }
 
-    public void addToCart(Pizza pizza, int quantity, boolean requiresDelivery, double deliveryDistance) {
-        // Check if similar pizza already exists in cart (same name, size, and toppings)
+    public void addToCart(Donut donut, int quantity, boolean requiresDelivery, double deliveryDistance) {
+        // Check if similar donut already exists in cart (same name, size, and customizations)
         for (CartItem item : cartItems) {
-            if (isSamePizzaConfiguration(item.getPizza(), pizza)) {
+            if (isSameDonutConfiguration(item.getDonut(), donut)) {
                 item.setQuantity(item.getQuantity() + quantity);
                 if (requiresDelivery) {
                     item.setDelivery(true, deliveryDistance);
@@ -31,22 +31,27 @@ public class CartManager {
             }
         }
         // If not, add as new item
-        CartItem newItem = new CartItem(pizza, quantity);
+        CartItem newItem = new CartItem(donut, quantity);
         if (requiresDelivery) {
             newItem.setDelivery(true, deliveryDistance);
         }
         cartItems.add(newItem);
     }
     
-    public void addToCart(Pizza pizza, int quantity) {
-        addToCart(pizza, quantity, false, 0);
+    public void addToCart(Donut donut, int quantity) {
+        addToCart(donut, quantity, false, 0);
     }
     
-    private boolean isSamePizzaConfiguration(Pizza p1, Pizza p2) {
-        if (!p1.getName().equals(p2.getName())) return false;
-        if (p1.getSize() != p2.getSize()) return false;
-        if (p1.getToppings().size() != p2.getToppings().size()) return false;
-        return p1.getToppings().containsAll(p2.getToppings());
+    private boolean isSameDonutConfiguration(Donut d1, Donut d2) {
+        if (!d1.getName().equals(d2.getName())) return false;
+        if (d1.getSize() != d2.getSize()) return false;
+        if (d1.getToppings().size() != d2.getToppings().size()) return false;
+        if (d1.getGlazes().size() != d2.getGlazes().size()) return false;
+        if (d1.getSprinkles().size() != d2.getSprinkles().size()) return false;
+        
+        return d1.getToppings().containsAll(d2.getToppings()) &&
+               d1.getGlazes().containsAll(d2.getGlazes()) &&
+               d1.getSprinkles().containsAll(d2.getSprinkles());
     }
 
     public void removeFromCart(CartItem cartItem) {
@@ -76,7 +81,7 @@ public class CartManager {
     public double getSubtotal() {
         double subtotal = 0;
         for (CartItem item : cartItems) {
-            subtotal += item.getPizzaSubtotal();
+            subtotal += item.getDonutSubtotal();
         }
         return subtotal;
     }

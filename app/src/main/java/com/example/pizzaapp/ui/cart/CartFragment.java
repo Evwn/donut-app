@@ -18,7 +18,7 @@ import com.example.pizzaapp.R;
 import com.example.pizzaapp.adapters.CartAdapter;
 import com.example.pizzaapp.databinding.FragmentCartBinding;
 import com.example.pizzaapp.models.CartItem;
-import com.example.pizzaapp.models.Pizza;
+import com.example.pizzaapp.models.Donut;
 import com.example.pizzaapp.models.Purchase;
 import com.example.pizzaapp.utils.CartManager;
 import com.example.pizzaapp.utils.PurchaseManager;

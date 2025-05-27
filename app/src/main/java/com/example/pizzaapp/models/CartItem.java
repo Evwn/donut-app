@@ -1,7 +1,7 @@
 package com.example.pizzaapp.models;
 
 public class CartItem {
-    private Pizza pizza;
+    private Donut donut;
     private int quantity;
     private boolean requiresDelivery;
     private double deliveryDistance; // in kilometers
@@ -13,15 +13,20 @@ public class CartItem {
     private static final int FIRST_THRESHOLD = 5; // km
     private static final int SECOND_THRESHOLD = 10; // km
 
-    public CartItem(Pizza pizza, int quantity) {
-        this.pizza = pizza;
+    public CartItem(Donut donut, int quantity) {
+        this.donut = donut;
         this.quantity = quantity;
         this.requiresDelivery = false;
         this.deliveryDistance = 0;
     }
 
-    public Pizza getPizza() {
-        return pizza;
+    public Donut getDonut() {
+        return donut;
+    }
+    
+    // For backward compatibility
+    public Donut getPizza() {
+        return donut;
     }
 
     public int getQuantity() {
@@ -59,8 +64,13 @@ public class CartItem {
         }
     }
     
+    public double getDonutSubtotal() {
+        return donut.getTotalPrice() * quantity;
+    }
+    
+    // For backward compatibility
     public double getPizzaSubtotal() {
-        return pizza.getTotalPrice() * quantity;
+        return getDonutSubtotal();
     }
     
     public double getTotalPrice() {

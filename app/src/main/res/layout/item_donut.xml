@@ -1,4 +1,4 @@
-<!-- item_pizza.xml -->
+<!-- item_donut.xml -->
 <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
@@ -14,11 +14,11 @@
         android:padding="16dp">
 
         <ImageView
-            android:id="@+id/pizza_image"
+            android:id="@+id/donut_image"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_pizza" />
+            android:src="@drawable/donut_placeholder" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -29,7 +29,7 @@
             android:paddingEnd="8dp">
 
             <TextView
-                android:id="@+id/pizza_name"
+                android:id="@+id/donut_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
@@ -37,7 +37,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/pizza_description"
+                android:id="@+id/donut_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -54,7 +54,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/pizza_price"
+                    android:id="@+id/donut_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

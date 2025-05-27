@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Donut Base -->
+    <path
+        android:fillColor="#FFD180"
+        android:pathData="M54,12c-23.2,0 -42,18.8 -42,42s18.8,42 42,42 42,-18.8 42,-42S77.2,12 54,12z" />
+    
+    <!-- Glaze -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M54,16c-21,0 -38,17 -38,38s17,38 38,38 38,-17 38,-38S75,16 54,16z" />
+    
+    <!-- Sprinkles -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M40,40a4,4 0,1 1,-8,0 4,4 0,1 1,8,0z" />
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M76,60a4,4 0,1 1,-8,0 4,4 0,1 1,8,0z" />
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M50,90a4,4 0,1 1,0,-8 4,4 0,1 1,0,8z" />
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M80,70a4,4 0,1 1,0,-8 4,4 0,1 1,0,8z" />
+    
+    <!-- Hole -->
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M54,50c-6.6,0 -12,5.4 -12,12s5.4,12 12,12 12,-5.4 12,-12S60.6,50 54,50z" />
+</vector>

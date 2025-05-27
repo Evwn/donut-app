@@ -1,27 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Pizza theme colors -->
-    <color name="colorPrimary">#E53935</color>  <!-- Red -->
-    <color name="colorPrimaryLight">#FFCDD2</color>  <!-- Light Red -->
-    <color name="colorPrimaryDark">#C62828</color>  <!-- Dark Red -->
-    <color name="colorAccent">#FFA000</color>  <!-- Amber -->
+    <!-- Donut theme colors -->
+    <color name="colorPrimary">#9C27B0</color>  <!-- Purple 500 -->
+    <color name="colorPrimaryLight">#E1BEE7</color>  <!-- Purple 100 -->
+    <color name="colorPrimaryDark">#7B1FA2</color>  <!-- Purple 700 -->
+    <color name="colorAccent">#FF9800</color>  <!-- Orange 500 -->
+    <color name="colorAccentDark">#F57C00</color>  <!-- Orange 700 -->
     
     <!-- Text colors -->
-    <color name="textPrimary">#212121</color>  <!-- Dark Gray -->
-    <color name="textSecondary">#757575</color>  <!-- Medium Gray -->
+    <color name="textPrimary">#4A148C</color>  <!-- Deep Purple 900 -->
+    <color name="textSecondary">#6A1B9A</color>  <!-- Purple 900 -->
+    <color name="textHint">#757575</color>  <!-- Grey 600 -->
+    <color name="textDisabled">#BDBDBD</color>  <!-- Grey 400 -->
     
     <!-- Background colors -->
-    <color name="background">#FFF3E0</color>  <!-- Light Orange -->
+    <color name="background">#FFF8E1</color>  <!-- Amber 50 -->
+    <color name="onBackground">#212121</color>  <!-- Grey 900 -->
+    <color name="surface">#FFFFFF</color>  <!-- White -->
+    <color name="onSurface">#212121</color>  <!-- Grey 900 -->
     <color name="card_background">#FFFFFF</color>  <!-- White -->
     
     <!-- Button colors -->
-    <color name="button_primary">#F44336</color>  <!-- Red -->
+    <color name="button_primary">#7B1FA2</color>  <!-- Purple 700 -->
+    <color name="button_primary_light">#9C27B0</color>  <!-- Purple 500 -->
     <color name="button_text">#FFFFFF</color>  <!-- White -->
     
-    <!-- Status bar color -->
-    <color name="status_bar">#B71C1C</color>  <!-- Dark Red -->
+    <!-- Status bar and navigation colors -->
+    <color name="status_bar">#6A1B9A</color>  <!-- Purple 800 -->
+    <color name="navigation_bar">#4A148C</color>  <!-- Deep Purple 900 -->
     
-    <!-- Standard colors -->
+    <!-- Donut specific colors -->
+    <color name="donut_glaze">#FFEB3B</color>  <!-- Yellow 400 -->
+    <color name="donut_sprinkles">#F44336</color>  <!-- Red 500 -->
+    <color name="donut_icing">#E91E63</color>  <!-- Pink 500 -->
+    <color name="donut_chocolate">#5D4037</color>  <!-- Brown 700 -->
+    <color name="donut_strawberry">#F8BBD0</color>  <!-- Pink 100 -->
+    <color name="donut_vanilla">#FFF9C4</color>  <!-- Yellow 100 -->
+    
+    <!-- Standard colors with opacity -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_87">#DEFFFFFF</color>  <!-- 87% opacity -->
+    <color name="white_60">#99FFFFFF</color>  <!-- 60% opacity -->
+    <color name="black_87">#DE000000</color>  <!-- 87% opacity -->
+    <color name="black_60">#99000000</color>  <!-- 60% opacity -->
+    <color name="black_38">#61000000</color>  <!-- 38% opacity -->
+    <color name="black_12">#1F000000</color>  <!-- 12% opacity -->
+    
+    <!-- Surface colors -->
+    <color name="surfaceDark">#121212</color>  <!-- Dark surface color for dark theme -->
+    
+    <!-- Semantic colors -->
+    <color name="success">#4CAF50</color>  <!-- Green 500 -->
+    <color name="error">#F44336</color>  <!-- Red 500 -->
+    <color name="warning">#FFC107</color>  <!-- Amber 500 -->
+    <color name="info">#2196F3</color>  <!-- Blue 500 -->
+    
+    <!-- Divider color -->
+    <color name="divider">#1F000000</color>  <!-- Black 12% -->
+    
+    <!-- Ripple colors -->
+    <color name="rippleColor">#1F000000</color>  <!-- Black 12% -->
+    <color name="rippleColorLight">#0F000000</color>  <!-- Black 6% -->
 </resources>

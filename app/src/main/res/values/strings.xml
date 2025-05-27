@@ -1,18 +1,18 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- App Name -->
-    <string name="app_name">Pizza App</string>
+    <string name="app_name">Donut Delight</string>
     
     <!-- Navigation -->
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Pizza App</string>
-    <string name="nav_header_subtitle">Order your favorite pizza!</string>
+    <string name="nav_header_title">Donut Delight</string>
+    <string name="nav_header_subtitle">Order your favorite donuts!</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <!-- Menu Items -->
     <string name="menu_home">Home</string>
-    <string name="menu_menu">Our Menu</string>
+    <string name="menu_menu">Our Donuts</string>
     <string name="menu_cart">My Cart</string>
     
     <!-- Common -->
@@ -21,21 +21,21 @@
     <string name="total">Total:</string>
     <string name="order_summary">Order Summary</string>
     <string name="empty_cart">Your cart is empty</string>
-    <string name="start_ordering">Start ordering some delicious pizzas!</string>
+    <string name="start_ordering">Start ordering some delicious donuts!</string>
     
     <!-- Cart Actions -->
     <string name="increase_quantity">Increase quantity</string>
     <string name="decrease_quantity">Decrease quantity</string>
     <string name="remove_item">Remove item</string>
     
-    <!-- Pizza Descriptions -->
-    <string name="pizza_image">Pizza image</string>
-    <string name="margherita_desc">Classic pizza with tomato sauce, mozzarella, and fresh basil</string>
-    <string name="pepperoni_desc">Classic pepperoni pizza with tomato sauce and mozzarella</string>
-    <string name="vegetarian_desc">Loaded with fresh vegetables, tomato sauce, and mozzarella</string>
-    <string name="hawaiian_desc">Ham, pineapple, tomato sauce, and mozzarella</string>
-    <string name="meat_lovers_desc">Pepperoni, sausage, ham, bacon, tomato sauce, and mozzarella</string>
-    <string name="bbq_chicken_desc">Grilled chicken, red onions, BBQ sauce, and mozzarella</string>
+    <!-- Donut Descriptions -->
+    <string name="donut_image">Donut image</string>
+    <string name="glazed_desc">Classic ring donut with sweet glaze</string>
+    <string name="chocolate_desc">Fluffy donut with rich chocolate frosting</string>
+    <string name="strawberry_desc">Classic donut with sweet strawberry frosting</string>
+    <string name="boston_cream_desc">Cream-filled donut with chocolate glaze</string>
+    <string name="jelly_filled_desc">Soft donut filled with fruit jelly</string>
+    <string name="maple_bacon_desc">Maple glazed donut with crispy bacon</string>
     
     <!-- Button Text -->
     <string name="order_now">Order Now</string>
@@ -47,8 +47,18 @@
     <string name="quantity_updated">%1$s quantity updated to %2$d</string>
     <string name="order_placed">Order placed successfully!</string>
     <string name="view_order">View Order</string>
-    <string name="view_purchases">View Purchased Items</string>
-    <string name="purchased_items_placeholder">Your purchased items will appear here. You haven\'t made any purchases yet.</string>
+    <string name="view_purchases">View Order History</string>
+    <string name="purchased_items_placeholder">Your order history will appear here. You haven\'t made any orders yet.</string>
+    
+    <!-- Navigation Menu -->
+    <!-- Menu items are defined above in the file -->
+    <string name="menu_account">Account</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+    
+    <!-- About Dialog -->
+    <string name="about">About Donut Delight</string>
+    <string name="about_app_description">\nVersion 1.0.0\n\n© 2025 Donut Delight\nAll rights reserved.\n\nThe best donuts in town, made with love and the finest ingredients.\n\nContact us: info@donutdelight.com</string>
     
     <!-- Price Format -->
     <string name="price_format">$%.2f</string>

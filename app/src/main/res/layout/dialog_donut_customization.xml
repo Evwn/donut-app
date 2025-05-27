@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Size Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Size"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/size_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RadioButton
+                android:id="@+id/radio_single"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Single"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radio_half_dozen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Half Dozen"/>
+
+            <RadioButton
+                android:id="@+id/radio_dozen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dozen"/>
+        </RadioGroup>
+
+        <!-- Toppings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toppings (first 2 free)"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/topping_chocolate_chips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chocolate Chips"/>
+
+        <CheckBox
+            android:id="@+id/topping_peanuts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peanuts"/>
+
+        <CheckBox
+            android:id="@+id/topping_almonds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Almonds"/>
+
+        <CheckBox
+            android:id="@+id/topping_coconut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toasted Coconut"/>
+
+        <!-- Glazes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glazes (first 2 free)"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/glaze_chocolate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chocolate Glaze"/>
+
+        <CheckBox
+            android:id="@+id/glaze_vanilla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vanilla Glaze"/>
+
+        <CheckBox
+            android:id="@+id/glaze_strawberry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Strawberry Glaze"/>
+
+        <CheckBox
+            android:id="@+id/glaze_maple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maple Glaze"/>
+
+
+        <!-- Sprinkles -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sprinkles (first 2 free)"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/sprinkle_rainbow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rainbow Sprinkles"/>
+
+        <CheckBox
+            android:id="@+id/sprinkle_chocolate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chocolate Sprinkles"/>
+
+        <CheckBox
+            android:id="@+id/sprinkle_caramel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Caramel Drizzle"/>
+
+        <!-- Delivery Option -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <RadioGroup
+            android:id="@+id/delivery_option_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/radio_delivery_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pickup"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radio_delivery_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery"/>
+        </RadioGroup>
+
+        <!-- Delivery Details -->
+        <LinearLayout
+            android:id="@+id/delivery_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delivery Distance (km):"/>
+
+            <EditText
+                android:id="@+id/delivery_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="Enter distance in km"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -8,7 +8,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ic_pizza_launcher"
+            android:src="@drawable/ic_donut_launcher"
             android:alpha="0.2" />
     </item>
 </layer-list>

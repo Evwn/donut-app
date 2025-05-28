@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pizzaapp"
+    namespace = "com.example.donutapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.pizzaapp"
+        applicationId = "com.example.donutapp"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

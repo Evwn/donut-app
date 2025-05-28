@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:elevation="0dp"
-        android:theme="@style/Theme.PizzaApp.AppBarOverlay">
+        android:theme="@style/Theme.DonutApp.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -23,7 +23,7 @@
             android:background="@color/colorPrimary"
             app:titleTextColor="@color/white"
             app:subtitleTextColor="@color/colorPrimaryLight"
-            app:popupTheme="@style/Theme.PizzaApp.PopupOverlay"
+            app:popupTheme="@style/Theme.DonutApp.PopupOverlay"
             app:titleMarginStart="16dp"
             app:contentInsetStartWithNavigation="0dp"
             app:contentInsetStart="0dp">

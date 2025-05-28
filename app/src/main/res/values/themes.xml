@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.PizzaApp" parent="Theme.MaterialComponents.DayNight">
+    <style name="Theme.DonutApp" parent="Theme.MaterialComponents.DayNight">
         <!-- NoActionBar variant -->
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
@@ -65,7 +65,7 @@
     </style>
 
     <!-- AppBar Overlay Theme -->
-    <style name="Theme.PizzaApp.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+    <style name="Theme.DonutApp.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorSecondary">@color/white_87</item>
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -73,7 +73,7 @@
     </style>
     
     <!-- Popup Overlay Theme -->
-    <style name="Theme.PizzaApp.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
+    <style name="Theme.DonutApp.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
         <item name="android:colorBackground">@color/white</item>
         <item name="android:colorForeground">@color/black</item>
         <item name="android:textColor">@color/textPrimary</item>
@@ -153,7 +153,7 @@
         <item name="borderWidth">0dp</item>
     </style>
     <!-- NoActionBar theme variant -->
-    <style name="Theme.PizzaApp.NoActionBar" parent="Theme.PizzaApp">
+    <style name="Theme.DonutApp.NoActionBar" parent="Theme.DonutApp">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">false</item>
